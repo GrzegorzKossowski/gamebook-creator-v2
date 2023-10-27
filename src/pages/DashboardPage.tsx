@@ -1,16 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import ChaptersTree from '../components/ChaptersTree';
+import ChapterEditor from '../components/ChapterEditor';
 
 interface DashboardPageProps {}
 
 const DashboardPage = ({ ...restProps }: DashboardPageProps) => {
     return (
-        <>
-            DashboardPage
-            <div>
-                <Link to={'/'}>Home</Link>
-            </div>
-        </>
+        <div className='flex'>
+            <Navbar />
+            <ChaptersTree />
+            <ChapterEditor />
+        </div>
     );
 };
 

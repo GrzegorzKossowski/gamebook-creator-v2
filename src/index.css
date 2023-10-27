@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-color: rgb(230, 231, 238);
+}
+
+input[type=checkbox] {
+    color: red;
+}
+
+.bg-modal {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(3px);
+}
+
+.btn {
+    box-shadow: 5px 5px 10px #b9b9b9, -5px -5px 10px #ffffff;
+    border-radius: 5px;
+    padding: 3px 12px;
+    border: 1px solid rgb(220, 221, 228);
+}
+.btn:hover {
+    box-shadow: inset 5px 5px 10px #b9b9b9, inset -5px -5px 10px #ffffff;
+}

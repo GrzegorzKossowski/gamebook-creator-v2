@@ -20,7 +20,6 @@ const Modal = ({
 
     function childClick(event: React.MouseEvent) {
         event.stopPropagation();
-        console.log(`child clicked`);
     }
     if (!visible) return null;
 
@@ -33,9 +32,9 @@ const Modal = ({
                 onClick={childClick}
                 className='border border-slate-800 rounded-lg p-4 max-w-lg'
             >
-                <div className='flex justify-end mb-2'>
+                <div className='flex justify-end mb-4'>
                     {title && (
-                        <div className='mr-4 truncate text-xl'>{title}</div>
+                        <div className='mr-4 truncate text-2xl font-semibold'>{title}</div>
                     )}
                     <div className='w-fit  ml-auto'>
                         <svg

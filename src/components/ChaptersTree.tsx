@@ -10,7 +10,7 @@ const ChaptersTree = ({ ...restProps }: ChaptersTreeProps) => {
             />
             <div className='grow border overflow-auto p-2 shadow-inner bg-white space-y-2'>
                 {Array.from({ length: 40 }, (_, i) => (
-                    <div>{i}) lorem ipsum sid dolor</div>
+                    <div key={i}>{i}) lorem ipsum sid dolor</div>
                 ))}
             </div>
             <button className='btn'>New chapter</button>

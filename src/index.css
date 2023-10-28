@@ -11,7 +11,7 @@ input[type='checkbox'] {
 }
 
 .bg-modal {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(235, 235, 235, 0.7);
     backdrop-filter: blur(3px);
 }
 
@@ -20,6 +20,9 @@ input[type='checkbox'] {
     border-radius: 5px;
     padding: 3px 12px;
     border: 1px solid rgb(220, 221, 228);
+}
+.btn-primary {
+    background-color: #10AB7C;
 }
 .btn:active {
     @apply text-gray-50;

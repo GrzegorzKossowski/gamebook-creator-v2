@@ -1,22 +1,39 @@
+import React from 'react';
+import Modal from './Modal';
+import MetadataModal from './MetadataModal';
+
 interface NavbarProps {}
 
 const Navbar = ({ ...restProps }: NavbarProps) => {
+    const [isVisibleMetadataModal, setIsVisibleMetadataModal] =
+        React.useState<boolean>(true);
     return (
-        <nav className='flex flex-col space-y-8 p-4'>
-            <button className='btn'>New</button>
-            <button className='btn'>Import</button>
-            <button className='btn'>Export</button>
-            <button className='btn'>Add</button>
-            <button className='btn'>Shuffle</button>
-            <button className='btn'>Intro</button>
-            <button className='btn'>Metadata</button>
-            <button className='btn'>Stats</button>
-            <button className='btn'>Prev</button>
-            <button className='btn'>Play</button>
-            <button disabled className='btn'>
-                About
-            </button>
-        </nav>
+        <>
+            <nav className='flex flex-col space-y-8 p-4'>
+                <button disabled className='btn'>New</button>
+                <button disabled className='btn'>Import</button>
+                <button disabled className='btn'>Export</button>
+                <button disabled className='btn'>Add</button>
+                <button disabled className='btn'>Shuffle</button>
+                <button disabled className='btn'>Intro</button>
+                <button
+                    className='btn'
+                    onClick={() => setIsVisibleMetadataModal(true)}
+                >
+                    Metadata
+                </button>
+                <button disabled className='btn'>Stats</button>
+                <button disabled className='btn'>Prev</button>
+                <button disabled className='btn'>Play</button>
+                <button disabled className='btn'>
+                    About
+                </button>
+            </nav>
+            <MetadataModal
+                visible={isVisibleMetadataModal}
+                setVisible={setIsVisibleMetadataModal}
+            />
+        </>
     );
 };
 

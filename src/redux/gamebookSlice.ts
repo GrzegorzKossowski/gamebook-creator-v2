@@ -1,13 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { IGameBookState } from '../types';
+import { introduction } from '../config';
+import { RootState } from './store';
 
 const initialState: IGameBookState = {
-  authorName: '',
-  gamebookTitle: '',
-  introduction: '',
-  selectedId: undefined,
-  chapters: []
+    authorName: 'Joe Doe',
+    gamebookTitle: 'New Journey of Hobbits',
+    introduction,
+    selectedId: undefined,
+    chapters: [],
 };
 
 export const gamebookSlice = createSlice({
@@ -19,6 +21,11 @@ export const gamebookSlice = createSlice({
         },
     },
 });
+
+export const getMetadata = (state: RootState) => {
+    const { authorName, gamebookTitle, introduction } = state.gamebook;
+    return { authorName, gamebookTitle, introduction };
+};
 
 export const { setGamebookMetadata } = gamebookSlice.actions;
 export default gamebookSlice.reducer;

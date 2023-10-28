@@ -13,7 +13,7 @@ const Navbar = ({ ...restProps }: NavbarProps) => {
             <button className='btn'>Stats</button>
             <button className='btn'>Prev</button>
             <button className='btn'>Play</button>
-            <button className='btn'>About</button>
+            <button disabled className='btn'>About</button>
         </nav>
     );
 };

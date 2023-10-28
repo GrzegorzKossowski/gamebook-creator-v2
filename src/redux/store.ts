@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import testReducer from './testSlice';
+import gameBookReducer from './gamebookSlice';
 
 export const store = configureStore({
     reducer: {
-        test: testReducer,
+        gamebook: gameBookReducer,
     },
 });
 

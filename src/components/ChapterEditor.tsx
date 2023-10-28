@@ -43,7 +43,7 @@ const ChapterEditor = ({ ...restProps }: ChapterEditorProps) => {
                 placeholder='Create a new chapter using the "New Chapter" buttons or just start writing.'
             ></textarea>
             <div className='flex-none'>
-                <button className='btn w-full'>Save</button>
+                <button className='btn w-full'>Save chapter</button>
             </div>
         </div>
     );
